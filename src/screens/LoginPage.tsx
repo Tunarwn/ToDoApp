@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Image } from 'react-native';
 
 interface LoginProps {
   navigation: {
@@ -10,6 +10,14 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <View style={styles.iconRow}>
+        <Image source={require('../../assets/Ellipse5.png')} style={styles.icon} />
+        <Image source={require('../../assets/Ellipse6.png')} style={styles.icon} />
+        <Image source={require('../../assets/Ellipse7.png')} style={styles.icon} />
+        <Image source={require('../../assets/Ellipse8.png')} style={styles.icon} />
+        <Image source={require('../../assets/Ellipse9.png')} style={styles.icon} />
+        <Image source={require('../../assets/Ellipse10.png')} style={styles.icon} />
+      </View>
       <View style={styles.header}>
         <Text style={styles.appName}>Liny</Text>
         <Text style={styles.subtitle}>View, create and edit your Linear issues on the go</Text>
@@ -81,6 +89,17 @@ const styles = StyleSheet.create({
   linkText: {
     color: '#3b82f6',
     textDecorationLine: 'underline',
+  },
+  iconRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 40,
+  },
+  icon: {
+    width: 40,
+    height: 40,
+    marginHorizontal: 10,
   },
 });
 
